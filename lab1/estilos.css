@@ -1,10 +1,10 @@
 #testediv {
-    border: 2px solid black; /* Borda preta */
-    padding: 10px;           /* Espaçamento interno */
-    background-color: lightgray; /* Cor de fundo para visibilidade */
+    border: 2px solid black; 
+    padding: 10px;           
+    background-color: lightgray; 
 }
 
 img {
-    max-width: 100%; /* Garante que as imagens não excedam a largura do div */
-    height: auto;    /* Mantém a proporção da imagem */
+    max-width: 100%; 
+    height: auto;    
 }

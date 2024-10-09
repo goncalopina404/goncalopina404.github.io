@@ -19,16 +19,16 @@
 }
 
 #better {
-    border: 2px solid black; /* Borda preta */
-              /* Espaçamento interno */
+    border: 2px solid black; 
+              
     margin-top: 10px;
-    display: flex;            /* Usando Flexbox para dividir horizontalmente */
+    display: flex;            
 }
 
 #left,#right{
-    flex: 1;                  /* Cada div ocupará 50% da largura */
+    flex: 1;                  
     padding: 20px;
-    box-sizing: border-box;    /* Inclui padding e borda no cálculo da largura */
+    box-sizing: border-box;    
 }
 
 #left {
