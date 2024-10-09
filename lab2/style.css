@@ -1,0 +1,52 @@
+/* Estilos da barra de navegação */
+.navbar {
+    background-color: #333; /* Cor de fundo escura */
+    padding: 15px;          /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra da barra */
+}
+
+.navbar ul {
+    list-style-type: none;  /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex;          /* Exibe os itens horizontalmente */
+    justify-content: space-around; /* Espaço uniforme entre os itens */
+}
+
+.navbar ul li a {
+    color: white;           
+    font-size: 18px;           
+}
+
+#better {
+    border: 2px solid black; /* Borda preta */
+              /* Espaçamento interno */
+    margin-top: 10px;
+    display: flex;            /* Usando Flexbox para dividir horizontalmente */
+}
+
+#left,#right{
+    flex: 1;                  /* Cada div ocupará 50% da largura */
+    padding: 20px;
+    box-sizing: border-box;    /* Inclui padding e borda no cálculo da largura */
+}
+
+#left {
+    background-color: red;
+}
+
+#right {
+    background-color: green;
+}
+
+iframe{
+    width: 100%;
+}
+
+.photo-gallery {
+    display: flex;
+                 
+}
+.photo-gallery img {
+    margin:2px;       
+}
