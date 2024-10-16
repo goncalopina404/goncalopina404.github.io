@@ -1,14 +1,11 @@
 
-
-/* Estilo geral do body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-x: hidden; 
 }
 
-/* Estilização do cabeçalho */
 header {
     background-color: #333;
     color: white;
@@ -20,26 +17,22 @@ header {
     z-index: 1000;
 }
 
-/* Estilização do título no cabeçalho */
 header h1 {
     margin: 0;
 }
 
-/* Estilização da navegação */
 nav a {
     color: white;
     padding: 20px;
     text-decoration: none;
 }
 
-/* Cor especial para o último link */
 nav a:last-child {
     background-color: #555;
     color: #fff;
     border-radius: 4px;
 }
 
-/* Estilização dos links com pseudo-classes */
 nav a:link {
     color: #fff;
 }
