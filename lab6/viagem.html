@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Viagem</title>
+        <link rel="stylesheet" href="/lab6/style.css">
+
+    </head>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="local.html">Local</a></li>
+            <li><a href="multimedia.html">Multimídia</a></li>
+            <li><a href="info.html">Informações</a></li>
+            <li><a href="quizz.html">Quizz</a></li>
+            <li><a href="viagem.html">Viagem</a></li>
+            <li><a href="pontosinteresse.html">Guia </a></li>
+            <li><a href="capitais.html">Capital </a></li>
+
+
+
+        </ul>
+    </nav>
+    <div class="leftaside">
+        <p>oi</p>
+    </div>
+    <body>
+        <div id="labelCor">
+        <h2>Intenção de Viagem</h2>
+
+        <form action="https://postman-echo.com/get" method="get">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+    
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    
+                <label for="apelido">Apelido:</label>
+                <input type="text" id="apelido" name="apelido" placeholder="Digite seu apelido" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Detalhes da Viagem</legend>
+    
+                <label for="dataPartida">Data de Partida:</label>
+                <input type="date" id="dataPartida" name="dataPartida" required>
+    
+                <label for="dataRegresso">Data de Regresso:</label>
+                <input type="date" id="dataRegresso" name="dataRegresso" required>
+    
+                <label for="numeroPassageiros">Número de Passageiros:</label>
+                <input type="number" id="numeroPassageiros" name="numeroPassageiros" min="1" required>
+    
+                <label for="meioTransporte">Meio de Transporte Favorito:</label>
+                <select id="meioTransporte" name="meioTransporte" required>
+                    <option value="carro">Carro</option>
+                    <option value="comboio">Comboio</option>
+                    <option value="aviao">Avião</option>
+                    <option value="autocarro">Autocarro</option>
+                    <option value="bicicleta">Bicicleta</option>
+                    <option value="a-pe">A pé</option>
+                </select>
+    
+                <label>Serviço Desejado na Viagem:</label>
+                <input type="radio" id="basico" name="servico" value="basico" required>
+                <label for="basico">Básico</label>
+                <input type="radio" id="premium" name="servico" value="premium" required>
+                <label for="premium">Premium</label>
+                <p><label for="pedidosEspeciais">Pedidos Especiais:</label></p>
+                <textarea id="pedidosEspeciais" name="pedidosEspeciais" rows="4" cols="50" placeholder="Digite seus pedidos especiais..."></textarea>
+                <label for="valorDiario">Valor Esperado por Pessoa e por Dia:</label>
+                <input type="number" id="valorDiario" name="valorDiario" placeholder="Valor em €" required>
+            </fieldset>
+    
+            <input type="reset" value="Resetar">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    
+    </body>
+    
+</html>   
