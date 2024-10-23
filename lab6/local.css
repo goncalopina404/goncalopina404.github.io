@@ -1,26 +1,24 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font */
-    background-color: #f5f5f5; /* Slightly lighter background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f5f5f5; 
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures footer is at the bottom */
+    min-height: 100vh; 
 }
 
-/* Header styles */
+
 header {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(to right, #FFB900, #FF5733, #FF9F33); /* Gradient with Lisbon colors */
+    background: linear-gradient(to right, #FFB900, #FF5733, #FF9F33);
     color: white;
-    border-bottom: 3px solid #4A90E2; /* Border for more structure */
+    border-bottom: 3px solid #4A90E2; 
 }
 
 header h1 {
@@ -32,117 +30,109 @@ header h1 {
 
 
 header p {
-    font-size: 1.2em; /* Larger paragraph */
+    font-size: 1.2em; 
 }
 
-/* Navbar styles */
 .navbar {
-    background-color: #4A90E2; /* Attractive navbar color */
+    background-color: #4A90E2; 
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation: slideDown 0.5s ease forwards; /* Apply animation */
+    animation: slideDown 0.5s ease forwards; 
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping of links */
-    justify-content: space-around; /* Space links evenly */
+    flex-wrap: wrap;
+    justify-content: space-around; 
 }
 
 .navbar ul li {
-    flex: 1 1 auto; /* Allow items to grow and shrink */
+    flex: 1 1 auto; 
 }
 
 .navbar ul li a {
     color: white;
     font-size: 18px;
     text-decoration: none;
-    padding: 10px 15px; /* More padding for a button-like feel */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.3s; /* Add transform for hover */
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 .navbar ul li a:hover {
-    background-color: #357ABD; /* Darker shade on hover */
-    transform: scale(1.1); /* Slightly enlarge link on hover */
+    background-color: #357ABD; 
+    transform: scale(1.1); 
 }
 
-/* Asides styles */
 .leftaside, .rightaside {
     background-color: #ffffff;
     padding: 20px;
-    width: 25%; /* Fixed width for asides */
-    margin: 10px; /* Space around asides */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    opacity: 0; /* Initial opacity for animation */
-    animation: fadeInLeft 0.5s ease forwards; /* Apply animation for left aside */
+    width: 25%; 
+    margin: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+    opacity: 0; 
+    animation: fadeInLeft 0.5s ease forwards; 
 }
 
 .rightaside {
-    animation: fadeInRight 0.5s ease forwards; /* Apply animation for right aside */
+    animation: fadeInRight 0.5s ease forwards; 
 }
 
-/* Aside headings and lists */
 .leftaside h2, .rightaside h2 {
-    color: #FF5733; /* Lisbon theme color for headings */
+    color: #FF5733; 
 }
 
 .leftaside ul, .rightaside ul {
-    list-style-type: square; /* Square bullets for lists */
-    padding-left: 20px; /* Indentation for lists */
-    margin-top: 10px; /* Spacing above the list */
+    list-style-type: square; 
+    padding-left: 20px; 
+    margin-top: 10px; 
 }
 
-/* Main layout styles */
 main {
     display: flex;
-    flex: 1; /* Allow main area to expand */
+    flex: 1; 
     padding: 20px;
-    justify-content: space-between; /* Space between asides and iframe */
+    justify-content: space-between; 
 }
 
-/* iframe styles */
 iframe {
-    width: 50%; /* Fixed width for iframe */
+    width: 50%; 
     height: 450px;
-    border: 1px solid #ccc; /* Border for the iframe */
-    border-radius: 8px; /* Rounded corners for iframe */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
 }
 
-/* Footer styles */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
+    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); 
     color: white;
     text-align: center;
-    padding: 15px; /* Increased padding for a better appearance */
-    font-weight: bold; /* Make footer text bold */
+    padding: 15px; 
+    font-weight: bold; 
 }
 
 
-/* Responsive design */
 @media screen and (max-width: 768px) {
     main {
-        flex-direction: column; /* Stack asides and iframe on small screens */
-        align-items: center; /* Center content */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .leftaside, .rightaside {
-        width: 90%; /* Full width on smaller screens */
-        margin: 10px 0; /* Margin for spacing */
-        opacity: 1; /* Ensure they are visible */
+        width: 90%; 
+        margin: 10px 0; 
+        opacity: 1; 
     }
 
     iframe {
-        width: 90%; /* Full width on smaller screens */
+        width: 90%; 
     }
 }
 
-/* Keyframe animations */
 @keyframes slideDown {
     from {
         transform: translateY(-50px);

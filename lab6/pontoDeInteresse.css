@@ -34,9 +34,9 @@ header {
 }
 
 header h1 {
-    font-family: 'Great Vibes', cursive; /* Lisbon-inspired cursive font */
-    font-size: 3.5rem; /* Slightly larger for a dramatic impact */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Enhanced shadow for better visibility */
+    font-family: 'Great Vibes', cursive; 
+    font-size: 3.5rem; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
     letter-spacing: 2px;
 }
 
@@ -272,14 +272,12 @@ td:nth-child(3) {
 }
 
 @media screen and (max-width: 768px) {
-    /* Stack the asides and main content */
     .leftaside, .container, .rightaside {
         width: 100%;
         padding: 10px;
         margin: 10px 0;
     }
 
-    /* Display them in vertical order (header, nav, right aside, main, left aside, footer) */
     .leftaside {
         order: 1;
     }
@@ -293,7 +291,6 @@ td:nth-child(3) {
     footer {
         order: 4;
     }
-    /* Body layout remains with header and nav in place */
     body {
         display: flex;
         flex-direction: column;
@@ -303,7 +300,6 @@ td:nth-child(3) {
 }
 
 @media screen and (max-width: 480px) {
-    /* Further adjustments for smaller screens like phones */
     .leftaside, .container .rightaside, .section {
         width: 100%;
         margin: 10px 0;
@@ -320,21 +316,18 @@ td:nth-child(3) {
     footer {
         order: 4;
     }
-    /* Flexbox structure for the navbar items */
     .navbar ul {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Adjust image gallery */
     .image-gallery {
         grid-template-columns: 1fr;
     }
 
-    /* Ensure table fits within the container */
     table {
         width: 100%;
-        table-layout: auto; /* Allow the table to adjust based on content */
+        table-layout: auto; 
     }
     body{
         overflow-x: hidden;  
@@ -342,12 +335,10 @@ td:nth-child(3) {
     }
 }
 
-/* Prevent elements from shrinking below 156px width */
 .leftaside, .container, .rightaside, header, .navbar, footer {
     min-width: 156px;
 }
 
-/* Optionally set a minimum height for better readability */
 #better, .image-gallery {
     min-height: 200px;
 }

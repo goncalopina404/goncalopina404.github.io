@@ -168,33 +168,33 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
+    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); 
     color: white;
     text-align: center;
-    padding: 15px; /* Increased padding for a better appearance */
-    font-weight: bold; /* Make footer text bold */
+    padding: 15px; 
+    font-weight: bold; 
     width: 100%;
-    position: relative;  /* Allow footer to sit at the bottom */
+    position: relative;  
     bottom: 0;
-    margin-top: 20px;   /* Add margin-top for spacing */
+    margin-top: 20px;   
 }
 
-/* Ensure the page doesn't shrink below 156px width and 642px height */
+
 html, body {
     min-width: 156px;
     min-height: 642px;
 }
 
-/* Responsive layout for smaller screens */
+
 @media screen and (max-width: 768px) {
-    /* Stack the asides and main content */
+   
     .leftaside, .main, .rightaside {
         width: 100%;
         padding: 10px;
         margin: 10px 0;
     }
 
-    /* Display them in vertical order (asides -> main -> asides) */
+  
     .leftaside {
         order: 1;
     }
@@ -205,14 +205,14 @@ html, body {
         order: 3;
     }
 
-    /* Ensure image gallery fits well */
+   
     .image-gallery {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Body layout remains with header and nav in place */
+    
     body {
         display: flex;
         flex-direction: column;
@@ -220,35 +220,33 @@ html, body {
 }
 
 @media screen and (max-width: 480px) {
-    /* Further adjustments for smaller screens like phones */
+    
     .leftaside, .main, .rightaside {
         width: 100%;
         margin: 10px 0;
     }
 
-    /* Ensure the better article takes full width */
+   
     #better {
         width: 100%;
     }
 
-    /* Flexbox structure for the navbar items */
+
     .navbar ul {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Adjust image gallery */
+    
     .image-gallery {
         grid-template-columns: 1fr;
     }
 }
 
-/* Prevent elements from shrinking below 156px width */
 .leftaside, .main, .rightaside, header, .navbar, footer {
     min-width: 156px;
 }
 
-/* Optionally set a minimum height for better readability */
 #better, .image-gallery {
     min-height: 200px;
 }
