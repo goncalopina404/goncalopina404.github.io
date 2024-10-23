@@ -1,4 +1,4 @@
- 
+/* Reset and Box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -6,133 +6,136 @@
 }
 
 body {
-    display: flex;
-     flex-direction: column;
+    display: grid;
+    grid-template-areas: 
+        'header-area header-area header-area'
+        'nav-area nav-area nav-area'
+        'leftaside-area main-area rightaside-area'
+        'footer-area footer-area footer-area';
     font-family: Arial, sans-serif;
     background-color: grey;
     align-items: center;
-    overflow-x: hidden; 
-    display: grid;
-    grid-template-areas: 'header-area header-area header-area'
-                        'nav-area nav-area nav-area'
-                        'leftaside-area main-area rightaside-area'
-                        'footer-area footer-area footer-area';
+    overflow-x: hidden;
+    background-image: url('path-to-your-pattern.png'); /* Replace with your pattern image */
+
 }
 
 header {
     grid-area: header-area;
     text-align: center;
     padding: 2.5%;
-    background-color: red;
+    background-color: #006600;
     width: 100%;
     margin-top: 10px;
-}
-.leftaside{
-    grid-area: leftaside-area;
-    background-color: white;
-    height: 100%;
+    animation: slideDown 2s ease-in-out;
+    border-bottom: 5px solid red; 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; 
 }
 
-.rightaside{
+.leftaside {
+    grid-area: leftaside-area;
+    background-color: white;
+    padding: 20px;
+    animation: fadeInLeft 1.5s ease;
+}
+
+.rightaside {
     grid-area: rightaside-area;
     background-color: white;
-    height: 100%;
+    padding: 20px;
+    animation: fadeInRight 1.5s ease;
+}
+
+/* Keyframe animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Navbar adjustments */
 .navbar {
+    margin-top: 10px;
     grid-area: nav-area;
     background-color: #333; 
-    padding: 15px;         
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .navbar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;          
+    display: flex;
     justify-content: space-around;
 }
 
 .navbar ul li a {
-    color: white;           
-    font-size: 18px;     
+    color: white;
+    font-size: 18px;
     text-decoration: none;
     padding: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.navbar ul li a:link {
-    color: white;  
-}
-
-.navbar ul li a:visited {
-    color: lightgray;  
-}
-
-.navbar ul li a:hover {
-    color: #FFD700;  
-    background-color: #444;
     transition: background-color 0.3s ease;
 }
 
-.navbar ul li a:active {
-    color: orange;
-}
-
-.navbar ul li a:before {
-    content: '';  
-    width: 0;  
-    height: 2px;
-    background: #FFD700;  
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.navbar ul li a:hover:before {
-    width: 80%;  
-}
-
-.navbar ul li a:after {
-    content: '';  
-    width: 0;  
-    height: 20px;
-    background: #FFD700;  
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: width 0.3s ease;
-}
-
-.navbar ul li a:hover:after {
-    width: 100%;  
+.navbar ul li a:hover {
+    color: #FFD700;
+    background-color: #444;
 }
 
 /* Image gallery */
-.main{
+.main {
     grid-area: main-area;
 }
+
 .image-gallery {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;  /* Center the image gallery */
+    margin: 0 auto;
+    animation: slideUp 1.5s ease;
 }
 
 .image-gallery img {
     width: 32%;
     height: auto;
+    border-radius: 8px;
 }
 
 /* Main content area */
 #better {
-    
     width: 80%;
     max-width: 1200px;
     margin: 20px auto;
@@ -140,32 +143,27 @@ header {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-}
-#better h1 {
-    font-family: 'Arial', sans-serif;
-    color: red; 
-    border-bottom: 2px dashed red; 
-    padding-bottom: 10px; 
-    font-weight: bold;
 }
 
-#better p {
-    font-family: 'Georgia', serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 10px 0; 
+header h1 {
+    font-family: 'Georgia', serif;  /* A serif font for a more traditional, classic look */
+    color: white;  
+    font-size: 3rem;  /* Larger text size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Soft shadow for depth */
+    letter-spacing: 2px;  /* Adds a bit more spacing between letters */
+    text-transform: uppercase;  /* Make it all uppercase for emphasis */
+    padding: 0.5rem;
+
 }
 
 #better a {
-    font-weight: bold;
     color: red;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 #better a:hover {
-    text-decoration: underline; 
-    color: green; 
+    text-decoration: underline;
+    color: green;
 }
 
 /* Footer */
@@ -176,41 +174,84 @@ footer {
     text-align: center;
     width: 100%;
     padding: 10px;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
 }
 
-/* Responsive Styling with Media Queries */
+
+/* Ensure the page doesn't shrink below 156px width and 642px height */
+html, body {
+    min-width: 156px;
+    min-height: 642px;
+}
+
+/* General layout for larger screens remains the same */
+
+/* Responsive layout for smaller screens */
 @media screen and (max-width: 768px) {
-    .navbar ul {
+    /* Stack the asides and main content */
+    .leftaside, .main, .rightaside {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    /* Display them in vertical order (asides -> main -> asides) */
+    .leftaside {
+        order: 1;
+    }
+    .main {
+        order: 2;
+    }
+    .rightaside {
+        order: 3;
+    }
+
+    /* Ensure image gallery fits well */
+    .image-gallery {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    #better {
-        width: 90%;
+    /* Body layout remains with header and nav in place */
+    body {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 480px) {
+    /* Further adjustments for smaller screens like phones */
+    .leftaside, .main, .rightaside {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Ensure the better article takes full width */
+    #better {
+        width: 100%;
+    }
+
+    /* Flexbox structure for the navbar items */
     .navbar ul {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Adjust image gallery */
     .image-gallery {
         grid-template-columns: 1fr;
     }
-
-    #better {
-        width: 100%;
-    }
 }
 
-a:hover {
-    color: black;
+/* Prevent elements from shrinking below 156px width */
+.leftaside, .main, .rightaside, .header, .navbar, footer {
+    min-width: 156px;
+}
+
+/* Optionally set a minimum height for better readability */
+#better, .image-gallery {
+    min-height: 200px;
 }

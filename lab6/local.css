@@ -4,227 +4,143 @@
     padding: 0;
     box-sizing: border-box;
 }
-iframe{
-    width: 100%;
-    position: center;
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #FF5733; /* Header color */
+    color: white;
 }
+
+
 
 /* Body and container adjustments */
 body {
     font-family: Arial, sans-serif;
-    background-color: grey;
-    margin: 0;
-    padding: 0;
+    background-color: #f0f0f0; /* Light background for contrast */
     display: flex;
-    align-items: center; 
-    overflow-x: hidden;  
-    display: grid;
-    grid-template-areas: 'nav-area nav-area nav-area'
-    'header-area header-area header-area'
-    'leftaside-area main-area rightaside-area'
-    'footer-area footer-area footer-area';
-}
-.leftaside{
-    grid-area: leftaside-area;
-    background-color: white;
-    height: 100%;
-    margin-right: 10px;
-
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer is at the bottom */
 }
 
-.rightaside{
-    grid-area: rightaside-area;
-    background-color: white;
-    height: 100%;
-    margin-left: 10px;
-
-}
-main{
-    grid-area: main-area;
-}
-
-/* Header stays centered and responsive */
-header {
-    grid-area: header-area;
-    text-align: center;
-    padding: 2.5%;
-    background-color: red;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* Navbar adjustments */
+/* Navbar styles */
 .navbar {
-    grid-area: nav-area;
-    background-color: #333; 
-    padding: 15px;         
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    background-color: #4A90E2; /* Attractive navbar color */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.5s ease forwards; /* Apply animation */
 }
 
 .navbar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;          
-    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of links */
+    justify-content: space-around; /* Space links evenly */
+}
+
+.navbar ul li {
+    flex: 1 1 auto; /* Allow items to grow and shrink */
 }
 
 .navbar ul li a {
-    color: white;           
-    font-size: 18px;     
+    color: white;
+    font-size: 18px;
     text-decoration: none;
     padding: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.navbar ul li a:link {
-    color: white;  
-}
-
-.navbar ul li a:visited {
-    color: lightgray;  
+    transition: background-color 0.3s;
 }
 
 .navbar ul li a:hover {
-    color: #FFD700;  
-    background-color: #444;
-    transition: background-color 0.3s ease;
+    background-color: #357ABD; /* Darker shade on hover */
 }
 
-.navbar ul li a:active {
-    color: orange;
-}
-
-.navbar ul li a:before {
-    content: '';  
-    width: 0;  
-    height: 2px;
-    background: #FFD700;  
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.navbar ul li a:hover:before {
-    width: 80%;  
-}
-
-.navbar ul li a:after {
-    content: '';  
-    width: 0;  
-    height: 20px;
-    background: #FFD700;  
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: width 0.3s ease;
-}
-
-.navbar ul li a:hover:after {
-    width: 100%;  
-}
-
-/* Image gallery */
-.image-gallery {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;  /* Center the image gallery */
-}
-
-.image-gallery img {
-    width: 32%;
-    height: auto;
-}
-
-/* Main content area */
-#better {
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+/* Asides styles */
+.leftaside, .rightaside {
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-}
-#better h1 {
-    font-family: 'Arial', sans-serif;
-    color: red; 
-    border-bottom: 2px dashed red; 
-    padding-bottom: 10px; 
-    font-weight: bold;
+    padding: 20px;
+    width: 25%; /* Fixed width for asides */
+    margin: 0 10px; /* Space around asides */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initial opacity for animation */
+    animation: fadeInLeft 0.5s ease forwards; /* Apply animation for left aside */
 }
 
-#better p {
-    font-family: 'Georgia', serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 10px 0; 
+.rightaside {
+    animation: fadeInRight 0.5s ease forwards; /* Apply animation for right aside */
 }
 
-#better a {
-    font-weight: bold;
-    color: red;
-    text-decoration: none; 
+/* Main layout styles */
+main {
+    display: flex;
+    flex: 1; /* Allow main area to expand */
+    padding: 20px;
+    justify-content: space-between; /* Space between asides and iframe */
 }
 
-#better a:hover {
-    text-decoration: underline; 
-    color: green; 
+/* iframe styles */
+iframe {
+    width: 50%; /* Fixed width for iframe */
+    height: 450px;
+    border: 1px solid #ccc; /* Border for the iframe */
 }
 
-/* Footer */
+/* Footer styles */
 footer {
-    grid-area: footer-area;
     background-color: #333;
     color: white;
     text-align: center;
-    width: 100%;
     padding: 10px;
-    margin: 20px auto;
 }
 
-/* Responsive Styling with Media Queries */
+/* Responsive design */
 @media screen and (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
+    main {
+        flex-direction: column; /* Stack asides and iframe on small screens */
+        align-items: center; /* Center content */
     }
 
-    .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+    .leftaside, .rightaside {
+        width: 90%; /* Full width on smaller screens */
+        margin: 10px 0; /* Margin for spacing */
+        opacity: 1; /* Ensure they are visible */
     }
 
-    #better {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    #better {
-        width: 100%;
+    iframe {
+        width: 90%; /* Full width on smaller screens */
     }
 }
 
+/* Keyframe animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
-
-a:hover {
-    color: black;
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
