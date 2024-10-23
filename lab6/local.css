@@ -16,7 +16,7 @@ body {
 header {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(to right, #FFB900, #FF5733, #FF9F33);
+    background: linear-gradient(to right, red,  green);
     color: white;
     border-bottom: 3px solid #4A90E2; 
 }
@@ -34,7 +34,7 @@ header p {
 }
 
 .navbar {
-    background-color: #4A90E2; 
+    background-color: #333;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.5s ease forwards; 
@@ -108,7 +108,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); 
+    background: linear-gradient(to right, red,  green);   
     color: white;
     text-align: center;
     padding: 15px; 

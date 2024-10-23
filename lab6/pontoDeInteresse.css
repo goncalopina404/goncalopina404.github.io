@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: grid;
     grid-template-areas: 
@@ -10,20 +11,20 @@ body {
         'nav-area nav-area nav-area'
         'leftaside-area main-area rightaside-area'
         'footer-area footer-area footer-area';
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Changed background color to a soft neutral */
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0; /* Background neutral tone */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg');
     background-size: cover;
     background-position: center;
-    align-items: center; 
-    overflow-x: hidden; 
+    align-items: center;
+    overflow-x: hidden;
 }
+
 header {
     grid-area: header-area;
     padding: 2.5%;
     background-color: #006600;
     width: 100%;
-    margin-top: 10px;
     border-bottom: 5px solid red;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
     background-size: cover;
@@ -34,126 +35,58 @@ header {
 }
 
 header h1 {
-    font-family: 'Great Vibes', cursive; 
-    font-size: 3.5rem; 
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
 }
 
-.leftaside {
-    grid-area: leftaside-area;
-    background-color: white;
-    height: 100%;
-    margin-right: 10px;
-    animation: fadeInLeft 1.5s ease;
-}
-
-.rightaside {
-    grid-area: rightaside-area;
-    background-color: white;
-    height: 10%;
-    margin-left: 10px;
-    animation: fadeInRight 1.5s ease;
-}
-
-/* Navbar adjustments */
 .navbar {
     grid-area: nav-area;
-    background-color: #333; 
-    padding: 15px;         
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    margin-top: 10px;
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;          
+    display: flex;
     justify-content: space-around;
 }
 
 .navbar ul li a {
-    color: white;           
-    font-size: 18px;     
+    color: white;
+    font-size: 18px;
     text-decoration: none;
     padding: 10px;
     display: flex;
     align-items: center;
 }
 
-.navbar ul li a:link {
-    color: white;  
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 
-.navbar ul li a:visited {
-    color: lightgray;  
-}
-
-#labelCor {
+.leftaside, .rightaside {
     background-color: white;
-    border: 10px solid black; 
-    margin-top: 8px;
-}
-
-label {
-    font-size: small;
-}
-
-input {
-    font-size: medium;
-}
-
-label, input {
-    display: block;
-    margin-bottom: 10px;
-}
-
-footer {
-    grid-area: footer-area;
-    display: flex;
-    width:100% ;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
-    color: white;
-    text-align: center;
-    padding: 15px; /* Increased padding for a better appearance */
-    font-weight: bold; /* Make footer text bold */
-    
-}
-
-.image-gallery {
-    display: flex;
-    justify-content: space-between;
     padding: 20px;
-}
-
-.image-gallery img {
-    width: 32%; 
-    height: auto;
-}
-
-
-
-ul, ol {
-    font-size: 1.5em; 
-}
-
-ul li, ol li {
-    font-size: inherit; 
-    line-height: 1.5; 
-}
-
-article {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 100%;
-    background: orange;
+    animation: fadeIn 1.5s ease;
 }
 
-article:last-child {
-    height: 100%;
-    background: red;
-    color: white;
+.leftaside {
+    grid-area: leftaside-area;
+    margin-right: 10px;
+}
+
+.rightaside {
+    grid-area: rightaside-area;
+    margin-left: 10px;
 }
 
 .container {
@@ -179,15 +112,20 @@ h2 {
     border-radius: 8px;
     background-color: #e9e9e9;
 }
+#section {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e9e9e9;
+}
 
-ol {
-    list-style-type: lower-roman;
+ol, ul {
     padding-left: 20px;
 }
 
-ul {
-    list-style-type: square; 
-    padding-left: 20px;
+ul li, ol li {
+    line-height: 1.5;
 }
 
 iframe {
@@ -197,8 +135,7 @@ iframe {
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+    border-collapse:separate;
 }
 
 th, td {
@@ -222,7 +159,7 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(2) {
-    background-color: #ffe4b5; 
+    background-color: #ffe4b5;
 }
 
 td:nth-child(1) {
@@ -237,42 +174,29 @@ td:nth-child(3) {
     color: #2e8b57;
 }
 
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+footer {
+    grid-area: footer-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, red,  green);   
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeIn {
     from {
-        transform: translateX(-50px);
         opacity: 0;
     }
     to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
         opacity: 1;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .leftaside, .container, .rightaside {
+    .leftaside, .container, .rightaside, header,footer,section, #section {
         width: 100%;
         padding: 10px;
         margin: 10px 0;
@@ -281,9 +205,11 @@ td:nth-child(3) {
     .leftaside {
         order: 1;
     }
+
     .container {
         order: 2;
     }
+
     .rightaside {
         order: 3;
     }
@@ -291,54 +217,123 @@ td:nth-child(3) {
     footer {
         order: 4;
     }
+
     body {
         display: flex;
         flex-direction: column;
-        overflow-x: hidden;  
+        overflow-x: hidden;
+    }
 
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .leftaside, .container .rightaside, .section {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .leftaside {
-        order: 1;
-    }
-    .container {
-        order: 2;
-    }
-    .rightaside {
-        order: 3;
-    }
-    footer {
-        order: 4;
-    }
     .navbar ul {
         flex-direction: column;
         align-items: center;
     }
 
-    .image-gallery {
-        grid-template-columns: 1fr;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
     }
 
-    table {
+    iframe {
+        height: 200px;
+    }
+}
+
+.attractions-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.attractions-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.attraction-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 32%;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #006600;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #006600;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Travel Tips Section */
+.travel-tips-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.travel-tips-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.travel-tips {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.travel-tips li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.travel-tips li strong {
+    color: #006600;
+}
+
+@media (max-width: 768px) {
+    .attraction-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
         width: 100%;
-        table-layout: auto; 
     }
-    body{
-        overflow-x: hidden;  
-
-    }
-}
-
-.leftaside, .container, .rightaside, header, .navbar, footer {
-    min-width: 156px;
-}
-
-#better, .image-gallery {
-    min-height: 200px;
 }

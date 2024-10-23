@@ -133,7 +133,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); 
+    background: linear-gradient(to right, red,  green);   
     color: white;
     text-align: center;
     padding: 15px; 

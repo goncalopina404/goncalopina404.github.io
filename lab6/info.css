@@ -1,4 +1,4 @@
-/* Reset and Box-sizing */
+/* General Style */
 * {
     margin: 0;
     padding: 0;
@@ -12,19 +12,16 @@ body {
         'nav-area nav-area nav-area'
         'leftaside-area main-area rightaside-area'
         'footer-area footer-area footer-area';
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Soft neutral background */
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
-    background-size: cover;
-    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
 }
 
+/* Header */
 header {
     grid-area: header-area;
     padding: 2.5%;
     background-color: #006600;
     width: 100%;
-    margin-top: 10px;
     border-bottom: 5px solid red;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
     background-size: cover;
@@ -41,75 +38,12 @@ header h1 {
     letter-spacing: 2px;
 }
 
-
-.image-gallery {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    animation: slideUp 1.5s ease;
-}
-
-
-.leftaside, .rightaside {
-    background-color: white;
-    padding: 20px;
-    margin: 20px; /* Margin for separation */
-}
-
-.leftaside {
-    grid-area: leftaside-area;
-    animation: fadeInLeft 1.5s ease;
-}
-
-.rightaside {
-    grid-area: rightaside-area;
-    animation: fadeInRight 1.5s ease;
-}
-
-/* Keyframe animations */
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Navbar adjustments */
+/* Navbar */
 .navbar {
-    margin-top: 10px;
     grid-area: nav-area;
-    background-color: #333; 
+    background-color: #333;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
@@ -131,17 +65,17 @@ header h1 {
     background-color: #444;
 }
 
-/* Main content area */
+/* Main Section */
 .main {
     grid-area: main-area;
-    padding: 20px; /* Padding for main content */
+    padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px; /* Margin to separate from asides */
-    margin-bottom: 50px;
+    margin: 20px;
 }
 
+/* Better Section */
 #better {
     width: 80%;
     max-width: 1200px;
@@ -152,14 +86,53 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#better a {
-    color: red;
-    text-decoration: none;
+/* Sidebar Sections */
+.leftaside {
+    grid-area: leftaside-area;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    animation: fadeInLeft 1.5s ease;
 }
 
-#better a:hover {
-    text-decoration: underline;
-    color: green;
+.rightaside {
+    grid-area: rightaside-area;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    animation: fadeInRight 1.5s ease;
+}
+
+/* Info Section */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h3, h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -168,24 +141,17 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); 
+    background: linear-gradient(to right, red, green);
     color: white;
     text-align: center;
-    padding: 15px; 
-    font-weight: bold; 
+    padding: 15px;
+    font-weight: bold;
     width: 100%;
-    position: relative;  
+    position: relative;;
     bottom: 0;
-    margin-top: 20px;   
 }
 
-
-html, body {
-    min-width: 156px;
-    min-height: 642px;
-}
-
-
+/* Media Queries */
 @media screen and (max-width: 768px) {
    
     .leftaside, .main, .rightaside {
@@ -212,6 +178,9 @@ html, body {
         align-items: center;
     }
 
+    footer{
+        position: fixed;
+       }
     
     body {
         display: flex;
@@ -224,14 +193,19 @@ html, body {
     .leftaside, .main, .rightaside {
         width: 100%;
         margin: 10px 0;
+        margin-bottom: 50px;
     }
 
-   
+   footer{
+    position: fixed;
+   }
     #better {
         width: 100%;
     }
 
-
+    .main{
+        margin-top: -20px;
+    }
     .navbar ul {
         flex-direction: column;
         align-items: center;
@@ -251,4 +225,25 @@ html, body {
     min-height: 200px;
 }
 
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
