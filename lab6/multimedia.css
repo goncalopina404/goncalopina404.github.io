@@ -1,16 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     display: grid;
     grid-template-areas: 
+        'header-area header-area header-area'
         'nav-area nav-area nav-area'
         'leftaside-area main-area rightaside-area'
         'footer-area footer-area footer-area';
-    grid-template-columns: 1fr 2fr 1fr; /* Default responsive columns */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Soft neutral background */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
+    background-size: cover;
+    background-position: center;
 }
 
+header {
+    grid-area: header-area;
+    padding: 2.5%;
+    background-color: #006600;
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 5px solid red;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
 .leftaside {
     grid-area: leftaside-area;
     background-color: white;
@@ -28,6 +56,7 @@ body {
 }
 
 .navbar {
+    margin-top: 10px;
     grid-area: nav-area;
     background-color: #333; 
     padding: 15px;         
@@ -72,7 +101,7 @@ body {
     color: orange;
 }
 
-h1, h3 {
+h2,h3 {
     text-align: center;
     color: #4CAF50;
 }
@@ -111,18 +140,21 @@ h1, h3 {
 footer {
     grid-area: footer-area;
     background-color: #333;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
+    padding: 15px; /* Increased padding for a better appearance */
+    font-weight: bold; /* Make footer text bold */
     width: 100%;
     margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
     body {
-        grid-template-areas: 
+        grid-template-areas:
+            'header-area'
             'nav-area'
             'leftaside-area'
             'main-area'
@@ -146,6 +178,7 @@ footer {
 @media screen and (max-width: 480px) {
     body {
         grid-template-areas: 
+            'header-area' 
             'nav-area'
             'leftaside-area'
             'main-area'

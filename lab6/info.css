@@ -13,45 +13,59 @@ body {
         'leftaside-area main-area rightaside-area'
         'footer-area footer-area footer-area';
     font-family: Arial, sans-serif;
-    background-color: grey;
-    align-items: center;
-    overflow-x: hidden;
-    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
-    position: relative; /* Allow absolute positioning of footer */
-    background-image: url('path-to-your-pattern.png'); /* Replace with your pattern image */
+    background-color: #f0f0f0; /* Soft neutral background */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
+    background-size: cover;
+    background-position: center;
 }
-
 
 header {
     grid-area: header-area;
-    text-align: center;
     padding: 2.5%;
     background-color: #006600;
     width: 100%;
     margin-top: 10px;
-    animation: slideDown 2s ease-in-out;
-    border-bottom: 5px solid red; 
+    border-bottom: 5px solid red;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
     background-size: cover;
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
-    color: white; 
+    color: white;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: slideUp 1.5s ease;
+}
+
+
+.leftaside, .rightaside {
+    background-color: white;
+    padding: 20px;
+    margin: 20px; /* Margin for separation */
 }
 
 .leftaside {
     grid-area: leftaside-area;
-    background-color: white;
-    padding: 20px;
-    margin: 20px; /* Margem para afastar os asides do main */
     animation: fadeInLeft 1.5s ease;
 }
 
 .rightaside {
     grid-area: rightaside-area;
-    background-color: white;
-    padding: 20px;
-    margin: 20px; /* Margem para afastar os asides do main */
     animation: fadeInRight 1.5s ease;
 }
 
@@ -117,34 +131,17 @@ header {
     background-color: #444;
 }
 
-/* Image gallery */
+/* Main content area */
 .main {
     grid-area: main-area;
-    padding: 20px; /* Mantém o padding do main */
+    padding: 20px; /* Padding for main content */
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px; /* Margem para afastar o main dos asides */
+    margin: 20px; /* Margin to separate from asides */
     margin-bottom: 50px;
 }
 
-.image-gallery {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    animation: slideUp 1.5s ease;
-}
-
-.image-gallery img {
-    width: 32%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Main content area */
 #better {
     width: 80%;
     max-width: 1200px;
@@ -153,16 +150,6 @@ header {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-family: 'Georgia', serif;  /* A serif font for a more traditional, classic look */
-    color: white;  
-    font-size: 3rem;  /* Larger text size */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Soft shadow for depth */
-    letter-spacing: 2px;  /* Adds a bit more spacing between letters */
-    text-transform: uppercase;  /* Make it all uppercase for emphasis */
-    padding: 0.5rem;
 }
 
 #better a {
@@ -178,17 +165,19 @@ header h1 {
 /* Footer */
 footer {
     grid-area: footer-area;
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
     color: white;
     text-align: center;
+    padding: 15px; /* Increased padding for a better appearance */
+    font-weight: bold; /* Make footer text bold */
     width: 100%;
-    padding: 10px;
-    position: absolute;  /* Change from fixed to absolute */
-    bottom: 0;           /* Sticks it to the bottom of the page */
-    left: 0;
+    position: relative;  /* Allow footer to sit at the bottom */
+    bottom: 0;
     margin-top: 20px;   /* Add margin-top for spacing */
 }
-
 
 /* Ensure the page doesn't shrink below 156px width and 642px height */
 html, body {
@@ -263,3 +252,5 @@ html, body {
 #better, .image-gallery {
     min-height: 200px;
 }
+
+

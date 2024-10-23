@@ -1,24 +1,49 @@
-body {
-    overflow-x: hidden;  
-    font-family: Arial, sans-serif;
-    background-color: grey;
-    height: 100%;
+* {
     margin: 0;
     padding: 0;
-    align-items: center; 
-    overflow-x: hidden;  
+    box-sizing: border-box;
+}
+body {
     display: grid;
-    grid-template-areas: 'header-area header-area header-area'
-                        'nav-area nav-area nav-area'
-                        'rightaside-area main-area leftaside-area'
-                        'footer-area footer-area footer-area';
-                    
+    grid-template-areas: 
+        'header-area header-area header-area'
+        'nav-area nav-area nav-area'
+        'leftaside-area main-area rightaside-area'
+        'footer-area footer-area footer-area';
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Changed background color to a soft neutral */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
+    background-size: cover;
+    background-position: center;
+    align-items: center; 
+    overflow-x: hidden; 
+}
+header {
+    grid-area: header-area;
+    padding: 2.5%;
+    background-color: #006600;
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 5px solid red;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive; /* Lisbon-inspired cursive font */
+    font-size: 3.5rem; /* Slightly larger for a dramatic impact */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Enhanced shadow for better visibility */
+    letter-spacing: 2px;
 }
 
 .leftaside {
     grid-area: leftaside-area;
     background-color: white;
-    height: 10%;
+    height: 100%;
     margin-right: 10px;
     animation: fadeInLeft 1.5s ease;
 }
@@ -86,11 +111,16 @@ label, input {
 
 footer {
     grid-area: footer-area;
-    background-color: #333;
+    display: flex;
+    width:100% ;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
     color: white;
     text-align: center;
-    width: 100%;
-    position: relative;
+    padding: 15px; /* Increased padding for a better appearance */
+    font-weight: bold; /* Make footer text bold */
+    
 }
 
 .image-gallery {
@@ -104,9 +134,7 @@ footer {
     height: auto;
 }
 
-h1 {
-    text-transform: uppercase; 
-}
+
 
 ul, ol {
     font-size: 1.5em; 
@@ -209,32 +237,6 @@ td:nth-child(3) {
     color: #2e8b57;
 }
 
-header {
-    grid-area: header-area;
-    text-align: center;
-    padding: 2.5%;
-    background-color: #006600;
-    width: 100%;
-    margin-top: 10px;
-    animation: slideDown 2s ease-in-out;
-    border-bottom: 5px solid red; 
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white; 
-}
-
-header h1 {
-    font-family: 'Georgia', serif;  
-    color: white;  
-    font-size: 3rem;  
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
-    letter-spacing: 2px;  
-    text-transform: uppercase;  
-    padding: 0.5rem;
-}
 
 @keyframes slideDown {
     from {
@@ -271,7 +273,7 @@ header h1 {
 
 @media screen and (max-width: 768px) {
     /* Stack the asides and main content */
-    .leftaside, .main, .rightaside {
+    .leftaside, .container, .rightaside {
         width: 100%;
         padding: 10px;
         margin: 10px 0;
@@ -281,13 +283,16 @@ header h1 {
     .leftaside {
         order: 1;
     }
-    .main {
+    .container {
         order: 2;
     }
     .rightaside {
         order: 3;
     }
 
+    footer {
+        order: 4;
+    }
     /* Body layout remains with header and nav in place */
     body {
         display: flex;
@@ -299,20 +304,22 @@ header h1 {
 
 @media screen and (max-width: 480px) {
     /* Further adjustments for smaller screens like phones */
-    .leftaside, .main, .rightaside, .section {
+    .leftaside, .container .rightaside, .section {
         width: 100%;
         margin: 10px 0;
     }
     .leftaside {
         order: 1;
     }
-    .main {
+    .container {
         order: 2;
     }
     .rightaside {
         order: 3;
     }
-
+    footer {
+        order: 4;
+    }
     /* Flexbox structure for the navbar items */
     .navbar ul {
         flex-direction: column;
@@ -336,7 +343,7 @@ header h1 {
 }
 
 /* Prevent elements from shrinking below 156px width */
-.leftaside, .main, .rightaside, header, .navbar, footer {
+.leftaside, .container, .rightaside, header, .navbar, footer {
     min-width: 156px;
 }
 

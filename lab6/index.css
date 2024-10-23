@@ -13,11 +13,10 @@ body {
         'leftaside-area main-area rightaside-area'
         'footer-area footer-area footer-area';
     font-family: Arial, sans-serif;
-    background-color: grey;
-    align-items: center;
-    overflow-x: hidden;
-    background-image: url('path-to-your-pattern.png'); /* Replace with your pattern image */
-
+    background-color: #f0f0f0; /* Changed background color to a soft neutral */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -27,28 +26,132 @@ header {
     background-color: #006600;
     width: 100%;
     margin-top: 10px;
-    animation: slideDown 2s ease-in-out;
-    border-bottom: 5px solid red; 
+    border-bottom: 5px solid red;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Traditional_Portuguese_Tiles_%28164903788%29.jpeg/1024px-Traditional_Portuguese_Tiles_%28164903788%29.jpeg');
     background-size: cover;
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
-    color: white; 
+    color: white;
 }
 
-.leftaside {
-    grid-area: leftaside-area;
+header h1 {
+    font-family: 'Great Vibes', cursive; /* Lisbon-inspired cursive font */
+    font-size: 3.5rem; /* Slightly larger for a dramatic impact */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Enhanced shadow for better visibility */
+    letter-spacing: 2px;
+}
+
+.leftaside, .rightaside {
+    grid-area: leftaside-area; /* Maintain original classes */
     background-color: white;
     padding: 20px;
     animation: fadeInLeft 1.5s ease;
+    border-radius: 10px; /* Added rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added soft shadow */
 }
 
-.rightaside {
-    grid-area: rightaside-area;
-    background-color: white;
+.leftaside h2, .rightaside h2 {
+    font-family: 'Poppins', sans-serif; /* Lisbon-modern font */
+    font-weight: bold;
+    color: #004d40; /* Dark teal, reflecting Lisbon's maritime vibe */
+    border-bottom: 2px solid #004d40;
+}
+
+.navbar {
+    margin-top: 10px;
+    grid-area: nav-area;
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Added subtle rounding for buttons */
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+    background-color: #444;
+}
+
+.main {
+    grid-area: main-area;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
-    animation: fadeInRight 1.5s ease;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: slideUp 1.5s ease;
+}
+
+.image-gallery img {
+    width: 32%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #004d40; /* Lisbon-inspired border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added depth to images */
+}
+
+#better {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; /* Ensuring font consistency */
+}
+
+#better a {
+    color: #b71c1c;
+    text-decoration: none;
+}
+
+#better a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+
+footer {
+    grid-area: footer-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #FF5733, #4CAF50, #FFEB3B); /* Striped footer */
+    color: white;
+    text-align: center;
+    padding: 15px; /* Increased padding for a better appearance */
+    font-weight: bold; /* Make footer text bold */
+    width: 100%;
+    position: relative;  /* Allow footer to sit at the bottom */
+    margin-top: 20px;   /* Add margin-top for spacing */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Ensure the page doesn't shrink below 156px width and 642px height */
+html, body {
+    min-width: 156px;
+    min-height: 642px;
 }
 
 /* Keyframe animations */
@@ -85,108 +188,15 @@ header {
     }
 }
 
-/* Navbar adjustments */
-.navbar {
-    margin-top: 10px;
-    grid-area: nav-area;
-    background-color: #333; 
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-}
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar ul li a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    color: #FFD700;
-    background-color: #444;
-}
-
-/* Image gallery */
-.main {
-    grid-area: main-area;
-}
-
-.image-gallery {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    animation: slideUp 1.5s ease;
-}
-
-.image-gallery img {
-    width: 32%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Main content area */
-#better {
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-family: 'Georgia', serif;  /* A serif font for a more traditional, classic look */
-    color: white;  
-    font-size: 3rem;  /* Larger text size */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Soft shadow for depth */
-    letter-spacing: 2px;  /* Adds a bit more spacing between letters */
-    text-transform: uppercase;  /* Make it all uppercase for emphasis */
-    padding: 0.5rem;
-
-}
-
-#better a {
-    color: red;
-    text-decoration: none;
-}
-
-#better a:hover {
-    text-decoration: underline;
-    color: green;
-}
-
-/* Footer */
-footer {
-    grid-area: footer-area;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    position: fixed; 
-    bottom: 0;
-    left: 0;
-}
-
-
-/* Ensure the page doesn't shrink below 156px width and 642px height */
-html, body {
+/* Prevent elements from shrinking below 156px width */
+.leftaside, .main, .rightaside, .header, .navbar, footer {
     min-width: 156px;
-    min-height: 642px;
 }
 
-/* General layout for larger screens remains the same */
+/* Optionally set a minimum height for better readability */
+#better, .image-gallery {
+    min-height: 200px;
+}
 
 /* Responsive layout for smaller screens */
 @media screen and (max-width: 768px) {
@@ -244,14 +254,4 @@ html, body {
     .image-gallery {
         grid-template-columns: 1fr;
     }
-}
-
-/* Prevent elements from shrinking below 156px width */
-.leftaside, .main, .rightaside, .header, .navbar, footer {
-    min-width: 156px;
-}
-
-/* Optionally set a minimum height for better readability */
-#better, .image-gallery {
-    min-height: 200px;
 }
