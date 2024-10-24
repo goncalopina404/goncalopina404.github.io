@@ -122,7 +122,7 @@ img{
     color: #555;
 }
 @media screen and (max-width: 768px) {
-    .leftaside, .main, .rightaside,footer {
+    .leftaside, .main, .rightaside,footer,.together {
         width: 100%;
         padding: 10px;
         margin: 10px 0;
