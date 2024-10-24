@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        'header-area header-area header-area '
+        'interface-area interface-area interface-area '
+        'leftaside-area  rightaside-area rightaside-area'
+        'footer-area footer-area footer-area';
+    font-family: Arial, sans-serif;
+    background-color: black; 
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg'); /* Lisbon tile pattern */
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    grid-area: header-area;
+    background-color: grey;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    
+    
+}
+.main {
+    margin-top: 20px;
+    grid-area: interface-area;
+    text-align: center;
+    display: flex;
+    background-color: white;
+    color:black;
+    height: 30%;
+}
+footer {
+    grid-area: footer-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;   
+    color: black;
+    text-align: center;
+    padding: 15px; 
+    font-weight: bold; 
+    width: 100%;
+    position: relative;  
+    margin-top: 20px;   
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.leftaside {
+    grid-area: leftaside-area;
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    animation: fadeInLeft 1.5s ease;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.rightaside {
+    grid-area: rightaside-area;
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    animation: fadeInLeft 1.5s ease;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-left: 50 px;
+}
+#better {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; 
+}
+
+.together{
+    margin-top: 120px;
+    position: center;
+    justify-content: space-around; 
+    display:flex;
+    width: 100%;
+    gap: 20px;
+}
+
+img{
+    height: 30%;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+    background-color: grey;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-item p {
+    display: inline-flexbox;
+    position: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}

@@ -5,6 +5,8 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
         'header-area header-area header-area'
@@ -12,7 +14,7 @@ body {
         'leftaside-area main-area rightaside-area'
         'footer-area footer-area footer-area';
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0; /* Background neutral tone */
+    background-color: #f0f0f0; 
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Calçada_Portuguesa_Lisboa.jpg/640px-Calçada_Portuguesa_Lisboa.jpg');
     background-size: cover;
     background-position: center;
