@@ -34,6 +34,7 @@ header{
     text-align: center;
     display: flex;
     background-color: white;
+    border-radius: 10px;
     color:black;
     height: 30%;
 }

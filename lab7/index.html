@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Interatividade</title>
+    <style>
+        body {
+            background-color: #E6E6FA; /* Cor de fundo */
+            font-family: Arial, sans-serif;
+        }
+        .color-options {
+            margin-top: 10px;
+        }
+        .count-display {
+            margin-top: 10px;
+        }
+        #changeColorText {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p onmouseover="showMessage()" id="hoverMessage">1. Passa por aqui!</p>
+
+    <p id="changeColorText">2. Pinta-me!</p>
+    <div class="color-options">
+        <button onclick="changeTextColor('red')">Red</button>
+        <button onclick="changeTextColor('green')">Green</button>
+        <button onclick="changeTextColor('blue')">Blue</button>
+    </div>
+
+    <p>3. Experimenta escrever...</p>
+    <input type="text" oninput="changeInputColor(this)">
+
+    <p>4. Escolha uma cor em inglês:</p>
+    <input type="text" id="colorInput">
+    <button onclick="changeBackgroundColor()">submeter</button>
+
+    <div class="count-display">
+        <button onclick="showCount()">Conta!</button>
+        <span id="countDisplay">0</span>
+    </div>
+
+    <script src="/lab7/main.js"></script>
+</body>
+</html>

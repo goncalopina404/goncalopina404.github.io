@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos com Tema JDM</title>
+    <link rel="stylesheet" href="/lab7/eventos.css">
+</head>
+<body>
+    <nav style="background-color: #333; padding: 10px;">
+        <a href="index.html" style="color: white; margin-right: 20px; text-decoration: none;">Início</a>
+        <a href="eventos.html" style="color: white; text-decoration: none;">Eventos</a>
+    </nav>
+    <div class="car-container" id="carContainer">
+        <img id="carImage" src="/lab7/r35.jpg" alt="Carro JDM" width="300">
+        <p id="carInfo" class="car-info">Passe o mouse sobre o carro para mais detalhes</p>
+        <div class="button-container">
+            <button id="changeColorBtn">Trocar Cor</button>
+            <button id="changeTextBtn">Mudar Texto</button>
+        </div>
+    </div>
+
+    <div>
+        <h2>Digite o nome do seu carro favorito</h2>
+        <input type="text" id="carInput" placeholder="Ex: Nissan Skyline">
+        <p id="typedText"></p>
+    </div>
+
+    <div>
+        <h2>Insira detalhes do seu carro JDM</h2>
+        <form id="carForm" class="car-form">
+            <label for="carColor">Cor do carro: </label>
+            <input type="text" id="carColor" placeholder="Ex: Azul">
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="formResult"></p>
+    </div>
+
+    <script src="/lab7/mainEventos.js"></script>
+
+</body>
+</html>
