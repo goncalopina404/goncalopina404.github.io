@@ -1,0 +1,18 @@
+body {
+    background-color: #E6E6FA; /* Cor de fundo */
+    font-family: Arial, sans-serif;
+}
+.color-options {
+    margin-top: 10px;
+}
+.count-display {
+    margin-top: 10px;
+}
+#changeColorText {
+    color: red;
+    font-weight: bold;
+}
+nav a {
+font-size: 18px;
+padding: 8px 12px;
+}
