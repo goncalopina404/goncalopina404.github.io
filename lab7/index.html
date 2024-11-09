@@ -11,7 +11,7 @@
         <a href="index.html" style="color: white; margin-right: 20px; text-decoration: none;">Início</a>
         <a href="eventos.html" style="color: white; text-decoration: none;">Eventos</a>
     </nav>
-    <p onmouseover="showMessage()" id="hoverMessage">1. Passa por aqui!</p>
+    <p onmouseover="showMessage()" onmouseout="resetMessage()" id="hoverMessage">1. Passa por aqui!</p>
 
     <p id="changeColorText">2. Pinta-me!</p>
     <div class="color-options">
@@ -28,7 +28,7 @@
     <button onclick="changeBackgroundColor()">submeter</button>
 
     <div class="count-display">
-        <button onclick="showCount()">Conta!</button>
+        5. <button onclick="showCount()">Conta!</button>
         <span id="countDisplay">0</span>
     </div>
 

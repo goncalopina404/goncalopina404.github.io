@@ -1,7 +1,12 @@
-        function showMessage() {
-            const messageElement = document.getElementById('hoverMessage');
-            messageElement.textContent = 'Obrigado por passares!';       
-         }
+    function showMessage() {
+        const messageElement = document.getElementById('hoverMessage');
+        messageElement.textContent = 'Obrigado por passares!';
+     }
+
+    function resetMessage() {
+        const messageElement = document.getElementById('hoverMessage');
+        messageElement.textContent = '1. Passa por aqui!';
+    }
 
         function changeTextColor(color) {
             document.getElementById('changeColorText').style.color = color;

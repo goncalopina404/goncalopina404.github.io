@@ -1,0 +1,24 @@
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.car-container {
+    margin: 20px;
+    text-align: center;
+}
+.car-info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.button-container {
+    margin: 10px;
+}
+.car-form input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+nav a {
+    font-size: 18px;
+    padding: 8px 12px;
+}
