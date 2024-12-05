@@ -166,9 +166,13 @@ function finalizarCompra() {
         // Exibe o valor total e a referência de pagamento
         const valorFinalElement = document.getElementById('valor-final');
         const referenciaElement = document.getElementById('referencia');
+        const moradas = document.getElementById('morada');
+
 
         valorFinalElement.textContent = `Valor final a pagar: R$ ${parseFloat(data.totalCost).toFixed(2)}`;
         referenciaElement.textContent = `Referência de pagamento: ${data.reference}`;
+        moradas.textContent = `Morada onde vai ser mandado: ${data.address}`;
+
 
         // Exibe a seção de resultado
         document.getElementById('resultado-compra').style.display = 'block';
