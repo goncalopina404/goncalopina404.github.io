@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loja de Produtos</h1>
+    </header>
+   
+        <label for="select-categoria">Filtrar por categoria:</label>
+        <select id="select-categoria">
+            <option value="todas">Todas</option>
+        </select>
+    
+
+   
+        <label for="select-ordenacao">Ordenar por preço:</label>
+        <select id="select-ordenacao">
+            <option value="crescente">Rating: Menor para Maior</option>
+            <option value="decrescente">Rating: Maior para Menor</option>
+        </select>
+    
+    <input type="text" id="input-pesquisa" placeholder="Pesquisar produtos...">
+
+    <main>
+     
+        <section id="produtos">
+            <h2>Produtos Disponíveis</h2>
+            <ul id="lista-produtos"></ul>
+        </section>
+
+        <section id="cesto">
+            <h2>Carrinho de Compras</h2>
+            <ul id="lista-carrinho"></ul>
+            <p id="total">Total: $0.00</p>
+            <!-- Adiciona o checkbox para indicar se é estudante -->
+<label>
+    <input type="checkbox" id="check-estudante"> É estudante da DEISI
+</label>
+
+<!-- Adiciona o input para código de desconto -->
+<label for="input-desconto">Código de desconto:</label>
+<input type="text" id="input-desconto" placeholder="Insira seu código de desconto">
+
+<label for="morada">Morada:</label>
+<input type="text" id="input-morada" placeholder="Insira sua morada">
+
+<!-- Botão para finalizar a compra -->
+<button onclick="finalizarCompra()">Comprar</button>
+<button onclick="adicionarTodos()">Comprar todos os produtos</button>
+
+<!-- Elementos para exibir o valor final e a referência após a compra -->
+<div id="resultado-compra" style="display: none;">
+    <p id="valor-final"></p>
+    <p id="referencia"></p>
+</div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loja de Produtos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
